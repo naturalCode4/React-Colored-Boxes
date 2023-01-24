@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import ColoredBoxes from './components/ColoredBoxes';
-import ApiCallPractice from './components/ApiCallPractice';
+import ColoredBoxes from './components/coloredBoxes/ColoredBoxes';
+import ApiCallPractice from './components/coloredBoxes/ApiCallPractice';
 
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
       <h1>React Practice</h1>
       <header className="App-header">
         <ColoredBoxes/>
-        <br></br><br></br><br></br><br></br><br></br><br></br>
         <ApiCallPractice/>
+        <br></br><br></br><br></br><br></br><br></br><br></br>
       </header>
     </div>
   )

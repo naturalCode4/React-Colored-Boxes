@@ -1,6 +1,6 @@
-import logo from '../logo.svg';
+import logo from '../../logo.svg';
 import React, { useState } from 'react';
-import {getColor} from '../ColorsApiMock.js'
+import {getColor} from '../../ColorsApiMock.js'
 
 function ColoredBoxes() {
 
@@ -34,7 +34,7 @@ function ColoredBoxes() {
       <div className="App">
         <hr></hr>
         <h1>Colored Boxes</h1>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
         {blueBoxes.map((color, index) => {
             // async function returning a promise that we need to await before rendering color
             if ((index + 1) % 2 === 0) {
