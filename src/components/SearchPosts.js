@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Search({posts, setFilteredPosts}) {
+export function SearchPosts({posts, setFilteredPosts}) {
 
     const filterPosts = (text) => {
         const filtered = posts.filter(post => post.title.includes(text) || post.body.includes(text))
@@ -11,7 +11,7 @@ export function Search({posts, setFilteredPosts}) {
         <div>
             <input 
                 type='text'
-                placeholder='Search...'
+                placeholder='Search posts...'
                 onChange = {e => filterPosts(e.target.value)}
             />
         </div>

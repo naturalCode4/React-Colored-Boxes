@@ -1,32 +1,45 @@
 import axios from 'axios';
 import React, {useEffect, useState } from "react";
 import { Posts } from './Posts';
-import { Search } from './Search';
+import { SearchPosts } from './SearchPosts';
+import { SearchUsers } from './SearchUsers';
+import { Users } from './Users';
 
 function ApiCallPractice() {
 
     const [posts, setPosts] = useState([])
     const [filteredPosts, setFilteredPosts] = useState([])
 
+    const [userInfos, setUserInfos] = useState([])
+
+    const apiBaseURL = 'https://jsonplaceholder.typicode.com'
+
+    const getUsers = async () => {
+        const data = await axios.get(`${apiBaseURL}/users`)
+        setUserInfos(data.data)
+    }
+
     const getPosts = async () => {
-        const data = await axios.get('https://jsonplaceholder.typicode.com/posts') 
-        console.log('data')
+        const data = await axios.get(`${apiBaseURL}/posts`) 
         setPosts(data.data)
         setFilteredPosts(data.data)
     }
 
     useEffect(() => {
+        getUsers()
         getPosts()
-        .then(() => console.log('posts', posts))
-        .then(() => console.log('filteredPosts', filteredPosts))
     }, [])
 
     return (
         <div>
             <hr></hr>
             <h1>ApiCallPractice</h1>
-            <Search posts={posts} setFilteredPosts={setFilteredPosts}/>
+            <SearchUsers userInfos={userInfos} filteredUsers={filteredUsers} setFilteredUsers={setFilteredUsers} apiBaseURL={apiBaseURL}/>
+            {/* <Users filteredUsers={filteredUsers} usersPosts={usersPosts} apiBaseURL={apiBaseURL}/> */}
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            <SearchPosts posts={posts} setFilteredPosts={setFilteredPosts}/>
             <Posts filteredPosts={filteredPosts}/>
+            
         </div>
     )
 }

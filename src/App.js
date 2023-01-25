@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import ColoredBoxes from './components/coloredBoxes/ColoredBoxes';
-import ApiCallPractice from './components/coloredBoxes/ApiCallPractice';
+import ColoredBoxes from './components/ColoredBoxes';
+import ApiCallPractice from './components/ApiCallPractice';
 
 
 function App() {

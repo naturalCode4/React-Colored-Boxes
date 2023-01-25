@@ -1,6 +1,6 @@
-import logo from '../../logo.svg';
+import logo from '../logo.svg';
 import React, { useState } from 'react';
-import {getColor} from '../../ColorsApiMock.js'
+import {getColor} from '../ColorsApiMock.js'
 
 function ColoredBoxes() {
 
