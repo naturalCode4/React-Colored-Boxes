@@ -2,9 +2,9 @@ import React from "react";
 
 export function SearchPosts({posts, setFilteredPosts}) {
 
-    const filterPosts = (text) => {
-        const filtered = posts.filter(post => post.title.includes(text) || post.body.includes(text))
-        setFilteredPosts(filtered)
+    const filterPostsByIncludesText = (text) => {
+        const postsThatIncludeText = posts.filter(post => post.title.includes(text) || post.body.includes(text))
+        setFilteredPosts(postsThatIncludeText)
     }
 
     return (
@@ -12,7 +12,7 @@ export function SearchPosts({posts, setFilteredPosts}) {
             <input 
                 type='text'
                 placeholder='Search posts...'
-                onChange = {e => filterPosts(e.target.value)}
+                onChange = {e => filterPostsByIncludesText(e.target.value)}
             />
         </div>
     )
