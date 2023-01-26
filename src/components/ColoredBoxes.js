@@ -32,7 +32,6 @@ function ColoredBoxes() {
   
     return (
       <div className="App">
-        <hr></hr>
         <h1>Colored Boxes</h1>
         <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
         {blueBoxes.map((color, index) => {

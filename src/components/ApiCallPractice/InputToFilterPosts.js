@@ -1,6 +1,6 @@
 import React from "react";
 
-export function SearchPosts({posts, setFilteredPosts}) {
+export function InputToFilterPosts({posts, setFilteredPosts}) {
 
     const filterPostsByIncludesText = (text) => {
         const postsThatIncludeText = posts.filter(post => post.title.includes(text) || post.body.includes(text))
@@ -11,7 +11,7 @@ export function SearchPosts({posts, setFilteredPosts}) {
         <div>
             <input 
                 type='text'
-                placeholder='Search posts...'
+                placeholder='Filter posts...'
                 onChange = {e => filterPostsByIncludesText(e.target.value)}
             />
         </div>

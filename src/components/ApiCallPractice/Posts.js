@@ -4,12 +4,12 @@ export function Posts({filteredPosts}) {
     return (
         <div>
             <p><b><u>Posts</u></b></p>
-            <div>{filteredPosts.map(post => {
+            <div>{filteredPosts.map(filteredPost => {
                 return (
                     <div>
-                        <p>Post Number {post.id}</p>
-                        <p>Title: {post.title}</p>
-                        <p>Post: {post.body}</p>
+                        <p>Post Number {filteredPost.id}</p>
+                        <p>Title: {filteredPost.title}</p>
+                        <p>Post: {filteredPost.body}</p>
                         <br></br>
                         <hr></hr>
                     </div>
