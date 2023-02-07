@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import RickAndMorty from './components/RickAndMortyPractice/RickAndMorty';
 import ColoredBoxes from './components/ColoredBoxes';
 import ApiCallPractice from './components/ApiCallPractice/ApiCallPractice';
 
@@ -9,9 +10,9 @@ function App() {
     <div className="App">
       <h1>React Practice</h1>
       <div className="App-content">
+        <RickAndMorty/>
         <ColoredBoxes/>
         <ApiCallPractice/>
-        <br></br><br></br><br></br><br></br><br></br><br></br>
       </div>
     </div>
   )

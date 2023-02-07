@@ -18,3 +18,7 @@ export const getUsersPosts = async (id) => {
     return posts.data
 }  // [{}, {}, {}]
 
+export const getRickAndMortyCharacterBasedOnId = async (id) => {
+    return axios.get('https://rickandmortyapi.com/api/character/' + id)
+}
+

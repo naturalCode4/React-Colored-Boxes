@@ -1,6 +1,6 @@
 import logo from '../logo.svg';
 import React, { useState } from 'react';
-import {getColor} from '../ColorsApiMock.js'
+import {getColor} from '../ColorsMockApi'
 
 function ColoredBoxes() {
 
@@ -32,6 +32,7 @@ function ColoredBoxes() {
   
     return (
       <div className="App">
+        <hr></hr>
         <h1>Colored Boxes</h1>
         <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
         {blueBoxes.map((color, index) => {
